@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  - const electricappliances = ['electricitems','company','price']
+  script.
+  - const results = [{ electricitems: "mobile", company: "redmi", price: "300" },{ electricitems: "laptop", company: "hp", price: "1200" },{ electricitems: "fan", company: "usha", price: "1000" }]
+  div(class='container-fluid')
+    div(class='row')
+      each result in results
+        div(class='col-sm-2')
+          p electricitems: #{result.electricitems}
+          p company: #{result.company}
+          p price: #{result.price}
